@@ -42,7 +42,7 @@
     "trailingComma": "es5",
     "jsxBracketSameLine": true
   },
-  "name": "use-dropdown",
+  "name": "@tracksuitdev/use-dropdown",
   "author": "tracksuitdev",
   "module": "dist/use-dropdown.esm.js",
   "size-limit": [
