@@ -1,7 +1,7 @@
 # useDropdown
 
 React hook for managing dropdown state. Can be used to manage state of any component that closes
-when clicked outside or outside some other component/s (see [additionalRefs]()).
+when clicked outside or outside some other component/s (see [additionalRefs](#props)).
 
 ## Usage
 ```typescript jsx
