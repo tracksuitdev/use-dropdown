@@ -21,6 +21,17 @@
   "peerDependencies": {
     "react": ">=16"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/tracksuitdev/use-dropdown#readme",
+  "keywords": [
+    "react", "hooks", "dropdown", "click outside"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tracksuitdev/use-dropdown"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
