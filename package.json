@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,7 +26,10 @@
   },
   "homepage": "https://github.com/tracksuitdev/use-dropdown#readme",
   "keywords": [
-    "react", "hooks", "dropdown", "click outside"
+    "react",
+    "hooks",
+    "dropdown",
+    "click outside"
   ],
   "repository": {
     "type": "git",
