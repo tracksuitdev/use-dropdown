@@ -1,13 +1,14 @@
 # useDropdown
 
-React hook for managing dropdown state. Can be used to manage state of any component that closes
-when clicked outside or outside some other component/s (see [additionalRefs](#props)).
+React hook for managing dropdown state. Can be used to manage state of any component that closes when clicked outside or
+outside some other component/s (see [additionalRefs](#props)).
 
 ## Usage
+
 ```typescript jsx
 const App = () => {
   const buttonRef = useRef(null);
-  const { dropdownRef, isOpen, open, close } = useDropdown({ additionalRefs: [buttonRef] });
+  const {dropdownRef, isOpen, open, close} = useDropdown({additionalRefs: [buttonRef]});
 
   const handleClick = isOpen ? close : open;
 
@@ -46,13 +47,13 @@ Adds window listener that will close dropdown on clicks outside of dropdownRef a
 
 **UseDropdownProps**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name              | Type                          | Description                                                                            |
+|:------------------|:------------------------------|:---------------------------------------------------------------------------------------|
+| `event`           | ` "click" or "mousedown"` |  Event that triggers dropdown close if outside of dropdown, default is "click"         |                                                                                      | 
 | `additionalRefs?` | `RefObject`<`HTMLElement`\>[] | These refs will be used when determining what constitutes a click outside of dropdown. |
-| `disabled?` | `boolean` | If true, open and close will do nothing |
-| `onClose?` | () => `void` |  Executed when close is called |
-| `onOpen?` | () => `void` | Executed when open is called |
-
+| `disabled?`       | `boolean`                     | If true, open and close will do nothing                                                |
+| `onClose?`        | () => `void`                  | Executed when close is called                                                          |
+| `onOpen?`         | () => `void`                  | Executed when open is called                                                           |
 
 ### Return value
 

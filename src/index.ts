@@ -14,9 +14,13 @@ export type UseDropdownProps = {
    */
   disabled?: boolean;
   /**
-   * These refs will be used when determining what constitutes a click outside of dropdown.
+   * These refs will be used when determining what constitutes an event outside of dropdown.
    */
   additionalRefs?: RefObject<HTMLElement>[];
+  /**
+   * Event that triggers dropdown close if outside of dropdown, default is "click"
+   */
+  event?: "mousedown" | "click"
 };
 
 export type UseDropdown<T extends HTMLElement = HTMLUListElement> = {
@@ -49,6 +53,7 @@ export function useDropdown<T extends HTMLElement = HTMLUListElement>({
   onOpen,
   disabled,
   additionalRefs,
+  event = "click"
 }: UseDropdownProps = {}): UseDropdown<T> {
   const dropdownRef = useRef<T>(null);
   const additionalRefsRef = useRef(additionalRefs);
@@ -91,12 +96,12 @@ export function useDropdown<T extends HTMLElement = HTMLUListElement>({
         close();
       }
     }
-    window.addEventListener("click", handler);
+    window.addEventListener(event, handler);
 
     return () => {
-      window.removeEventListener("click", handler);
+      window.removeEventListener(event, handler);
     };
-  }, [close]);
+  }, [close, event]);
 
   return {
     dropdownRef,
